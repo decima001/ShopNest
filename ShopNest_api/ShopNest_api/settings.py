@@ -71,7 +71,7 @@ DATABASES = {
         'PORT': '5432',
     }
 
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3'),
 }
 
 # Password validation
