@@ -62,16 +62,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ShopNest_api.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecommerce_db',
-        'USER': 'postgres',
-        'PASSWORD': 'decima001@',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3'),
+    'default': dj_database_url.config(
+        default="postgresql://postgres:decima001@@localhost:5432/ecommerce_db"
+    )
 }
 
 # Password validation
